@@ -23,8 +23,6 @@ public class TestAddition {
         int result = this.add.apply(3);
 
         Assert.assertEquals(5, result);
-        Assert.fail("test de fail");
-
     }
 
     @Test
@@ -33,7 +31,6 @@ public class TestAddition {
 
         result = this.add.undo();
         Assert.assertEquals(2, result);
-
     }
 
 }
