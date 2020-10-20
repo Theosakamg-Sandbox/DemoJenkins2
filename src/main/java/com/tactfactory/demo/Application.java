@@ -1,5 +1,7 @@
 package com.tactfactory.demo;
 
+import com.tactfactory.demo.commands.Addition;
+
 public class Application {
 
     public static void main(String[] args) {

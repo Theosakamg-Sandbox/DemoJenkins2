@@ -12,6 +12,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'pmd'
+    id "com.github.spotbugs" version "4.5.1"
 }
 
 dependencies {
@@ -35,7 +36,22 @@ pmd {
     toolVersion = "6.21.0"
     rulePriority = 5
     ignoreFailures = true
-    ruleSets = ["category/java/errorprone.xml", "category/java/bestpractices.xml"]
+    sourceSets = [sourceSets.main]
+    ruleSets = [
+      "category/java/codestyle.xml",
+      "category/java/design.xml",
+      "category/java/documentation.xml",
+      "category/java/errorprone.xml",
+      "category/java/multithreading.xml",
+      "category/java/performance.xml",
+      "category/java/security.xml",
+    ]
+}
+
+spotbugs {
+    ignoreFailures = true
+    showStackTraces = true
+    showProgress = true
 }
 
 

@@ -5,6 +5,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.tactfactory.demo.commands.Addition;
+
 public class TestAddition {
 
     private Addition add;
