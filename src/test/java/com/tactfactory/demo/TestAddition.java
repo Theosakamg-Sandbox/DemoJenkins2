@@ -22,14 +22,14 @@ public class TestAddition {
 
     @Test
     public void testApply() {
-        int result = this.add.apply(3);
+        int result = this.add.redo(3);
 
         Assert.assertEquals(5, result);
     }
 
     @Test
     public void testUndo() {
-        int result = this.add.apply(3);
+        int result = this.add.redo(3);
 
         result = this.add.undo();
         Assert.assertEquals(2, result);

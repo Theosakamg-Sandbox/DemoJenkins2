@@ -52,6 +52,7 @@ spotbugs {
     ignoreFailures = true
     showStackTraces = true
     showProgress = true
+    effort='max'
 }
 
 

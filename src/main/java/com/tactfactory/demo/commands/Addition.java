@@ -19,22 +19,15 @@ public class Addition implements Command {
         this.value = value;
     }
 
-    /**
-     * Apply command.
-     * @param b value to operate.
-     * @return the new value after command.
-     */
-    public int apply(final int addValue) {
+    @Override
+    public int redo(final int addValue) {
         this.addValue = addValue;
 
         this.value += this.addValue;
         return this.value;
     }
 
-    /**
-     * Roll-back the value.
-     * @return the old value.
-     */
+    @Override
     public int undo() {
         this.value -= this.addValue;
         return this.value;
