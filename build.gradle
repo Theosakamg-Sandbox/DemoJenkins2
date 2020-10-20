@@ -26,10 +26,15 @@ repositories {
     jcenter()
 }
 
+test {
+    ignoreFailures = true
+}
+
 pmd {
     consoleOutput = true
     toolVersion = "6.21.0"
     rulePriority = 5
+    ignoreFailures = true
     ruleSets = ["category/java/errorprone.xml", "category/java/bestpractices.xml"]
 }
 
